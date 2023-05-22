@@ -1,0 +1,52 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity partie3 is
+	port(
+			key	: in std_logic_vector(1 downto 0);
+			SW		: in std_logic_vector(9 downto 0);
+			LEDR	: out std_logic_vector(9 downto 0)
+			);
+end partie3;
+
+architecture arch of partie3 is
+	
+	component processor is
+		port
+			(
+				clock, aResetn, Run: in std_logic;
+				Din: in std_logic_vector(8 downto 0);
+				BusWires: buffer std_logic_vector(8 downto 0);
+				Done: buffer std_logic
+			);
+	end component;
+
+	component OnChip_rom IS
+		PORT
+			(
+				address		: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+				clock		: IN STD_LOGIC  := '1';
+				q		: OUT STD_LOGIC_VECTOR (8 DOWNTO 0)
+			);
+	END component;
+	
+	component counter is
+		port
+			(
+				clock, aResetn : in  std_logic;
+				count 			: out std_logic_vector(4 downto 0)
+			);
+	end component;
+	
+
+	
+begin
+-- add below the architecture of the circuit
+
+	
+	
+	
+									
+end arch;
+
+-- Add below the VHDL description of the counter
